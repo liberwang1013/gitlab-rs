@@ -1328,7 +1328,7 @@ impl Gitlab {
     }
 
     /// Handle paginated queries. Returns all results.
-    fn get_paged<T>(&self, url: &str) -> Result<Vec<T>>
+    pub fn get_paged<T>(&self, url: &str) -> Result<Vec<T>>
     where
         T: DeserializeOwned,
     {
@@ -1336,7 +1336,7 @@ impl Gitlab {
     }
 
     /// Handle paginated queries with query parameters. Returns all results.
-    fn get_paged_with_param<T, I, K, V>(&self, url: &str, params: I) -> Result<Vec<T>>
+    pub fn get_paged_with_param<T, I, K, V>(&self, url: &str, params: I) -> Result<Vec<T>>
     where
         T: DeserializeOwned,
         I: IntoIterator,

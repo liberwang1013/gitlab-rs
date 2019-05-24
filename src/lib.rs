@@ -35,7 +35,7 @@ mod error;
 #[macro_use]
 mod macros;
 mod gitlab;
-
+mod users;
 pub mod hooks;
 pub mod systemhooks;
 pub mod types;
